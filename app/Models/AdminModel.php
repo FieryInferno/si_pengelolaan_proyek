@@ -4,12 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class AdminModel extends Model
 {
-  protected $table      = 'user';
-  protected $primaryKey = 'id_user';
-  
-  protected $allowedFields = ['id_user', 'username', 'password', 'nama_lengkap', 'role', 'created_at', 'updated_at'];
+  protected $table      = 'admin';
+  protected $primaryKey = 'id_admin';
 
   protected $useTimestamps = false;
   protected $createdField  = 'created_at';

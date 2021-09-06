@@ -67,4 +67,11 @@ class Logincontroller extends BaseController
       return redirect()->back()->with('error', 'Username atau password tidak boleh kosong');
     }
   }
+
+  public function logout()
+  {
+    $session  = session();
+    $session->destroy();
+    return redirect()->to('/');
+  }
 }

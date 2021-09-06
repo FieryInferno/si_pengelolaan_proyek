@@ -4,30 +4,30 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class BuatTabelUser extends Migration
+class BuatTabelProyek extends Migration
 {
 	public function up()
 	{
     $this->forge->addField([
-      'id_user' => [
+      'id_proyek' => [
         'type'        => 'VARCHAR',
         'constraint'  => '191',
       ],
-      'username'  => [
-        'type'       => 'VARCHAR',
-        'constraint' => '100',
-      ],
-      'password'  => [
+      'pegawai_id'  => [
         'type'        => 'VARCHAR',
         'constraint'  => '191',
       ],
-      'nama_lengkap'  => [
+      'admin_id'  => [
         'type'        => 'VARCHAR',
         'constraint'  => '191',
       ],
-      'role'  => [
-        'type'        => 'ENUM',
-        'constraint'  => ['admin', 'member', 'pj', 'pegawai'],
+      'nama_proyek' => [
+        'type'        => 'VARCHAR',
+        'constraint'  => '191',
+      ],
+      'lokasi_proyek' => [
+        'type'        => 'VARCHAR',
+        'constraint'  => '191',
       ],
       'created_at'  => [
         'type'    => 'DATETIME',
@@ -38,12 +38,14 @@ class BuatTabelUser extends Migration
         'default' => NULL
       ],
     ]);
-    $this->forge->addKey('id_user', true);
-    $this->forge->createTable('user');
+    $this->forge->addKey('id_proyek', true);
+    $this->forge->addForeignKey('pegawai_id', 'pegawai', 'id_pegawai', 'CASCADE', 'CASCADE');
+    $this->forge->addForeignKey('admin_id', 'admin', 'id_admin', 'CASCADE', 'CASCADE');
+    $this->forge->createTable('proyek');
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('user');
+		//
 	}
 }
