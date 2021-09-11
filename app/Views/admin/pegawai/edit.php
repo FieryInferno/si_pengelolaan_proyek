@@ -46,7 +46,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukan Email" name="email_pegawai" required value="<?= $email_pegawai; ?>">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukan Email" name="email" required value="<?= $email; ?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nomor Telepon</label>
@@ -55,6 +55,16 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">NIP</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan NIP" name="nip" required value="<?= $nip; ?>">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Role</label>
+                    <select name="role" id="role" class="form-control">
+                      <option value="" disabled selected>Pilih Role</option>
+                      <option value="admin" <?= $role == 'admin' ? 'selected' : ''; ?>>Admin</option>
+                      <option value="pj" <?= $role == 'pj' ? 'selected' : ''; ?>>Penanggung Jawab</option>
+                      <option value="member" <?= $role == 'member' ? 'selected' : ''; ?>>Member</option>
+                      <option value="pegawai" <?= $role == 'pegawai' ? 'selected' : ''; ?>>Pegawai</option>
+                    </select>
                   </div>
                 </div>
                 

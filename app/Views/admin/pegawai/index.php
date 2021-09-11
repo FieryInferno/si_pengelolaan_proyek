@@ -48,22 +48,51 @@
                       <th>Email</th>
                       <th>Nomor Telepon</th>
                       <th>NIP</th>
+                      <th>Role</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php
                       $no = 1;
-                      foreach ($pegawai as $key) { ?>
+                      foreach ($pegawai as $key) { 
+                        switch ($key->role) {
+                          case 'admin':
+                            $email      = $key->email_admin;
+                            $nomor_telp = $key->nomor_telp_admin;
+                            $nip        = $key->nip_admin;
+                            break;
+                          case 'pegawai':
+                            $email      = $key->email_pegawai;
+                            $nomor_telp = $key->nomor_telp_pegawai;
+                            $nip        = $key->nip_pegawai;
+                            break;
+                          case 'member':
+                            $email      = $key->email_member;
+                            $nomor_telp = $key->nomor_telp_member;
+                            $nip        = $key->nip_member;
+                            break;
+                          case 'pj':
+                            $email      = $key->email_pj;
+                            $nomor_telp = $key->nomor_telp_pj;
+                            $nip        = $key->nip_pj;
+                            break;
+                          
+                          default:
+                            # code...
+                            break;
+                        }
+                    ?>
                         <tr>
                           <td><?= $no++; ?></td>
                           <td><?= $key->username; ?></td>
                           <td><?= $key->nama_lengkap; ?></td>
-                          <td><?= $key->email_pegawai; ?></td>
-                          <td><?= $key->nomor_telp; ?></td>
-                          <td><?= $key->nip; ?></td>
+                          <td><?= $email; ?></td>
+                          <td><?= $nomor_telp; ?></td>
+                          <td><?= $nip; ?></td>
+                          <td><?= $key->role; ?></td>
                           <td>
-                            <a href="<?= base_url(); ?>/admin/pegawai/edit/<?= $key->id_pegawai; ?>" class="btn btn-success">Edit</a>
+                            <a href="<?= base_url(); ?>/admin/pegawai/edit/<?= $key->id_user; ?>" class="btn btn-success">Edit</a>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?= $key->id_user; ?>">Hapus</button>
 
@@ -104,6 +133,7 @@
                       <th>Email</th>
                       <th>Nomor Telepon</th>
                       <th>NIP</th>
+                      <th>Role</th>
                       <th>Aksi</th>
                     </tr>
                   </tfoot>

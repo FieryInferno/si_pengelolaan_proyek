@@ -45,7 +45,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukan Email" name="email_pegawai" required>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukan Email" name="email" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nomor Telepon</label>
@@ -54,6 +54,16 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">NIP</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan NIP" name="nip" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Role</label>
+                    <select name="role" id="role" class="form-control">
+                      <option value="" disabled selected>Pilih Role</option>
+                      <option value="admin">Admin</option>
+                      <option value="pj">Penanggung Jawab</option>
+                      <option value="member">Member</option>
+                      <option value="pegawai">Pegawai</option>
+                    </select>
                   </div>
                 </div>
                 
