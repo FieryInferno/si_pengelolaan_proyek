@@ -21,7 +21,11 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        
+        <div class="card">
+          <div class="card-body">
+            <h2 class="text-center">Selamat Datang di Sistem Pengelolaan Proyek</h2>
+          </div>
+        </div>
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

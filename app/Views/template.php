@@ -34,9 +34,9 @@
   <div class="wrapper">
 
     <!-- Preloader -->
-    <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <div class="preloader flex-column justify-content-center align-items-center">
       <div class="animation__shake"><h1>Sistem Pengelolaan Proyek</h1></div>
-    </div> -->
+    </div>
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -71,32 +71,63 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <?php
+              switch (session('role')) {
+                case 'admin': ?>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/admin" class="nav-link <?= $title == 'Dashboard' ? 'active' : ''; ?>">
+                      <i class="nav-icon fas fa-tachometer-alt"></i>
+                      <p>Dashboard</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/admin/proyek" class="nav-link <?= $title == 'Proyek' ? 'active' : ''; ?>">
+                      <i class="nav-icon fas fa-th"></i>
+                      <p>Kelola Data Proyek</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/admin/pegawai" class="nav-link <?= $title == 'Pegawai' ? 'active' : ''; ?>">
+                    <i class="nav-icon fas fa-copy"></i>
+                      <p>Kelola Akun Pegawai</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/admin/register" class="nav-link <?= $title == 'Register' ? 'active' : ''; ?>">
+                    <i class="nav-icon fas fa-chart-pie"></i>
+                      <p>Register Proyek</p>
+                    </a>
+                  </li>
+                  <?php break;
+
+                case 'pj': ?>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/pj" class="nav-link <?= $title == 'Dashboard' ? 'active' : ''; ?>">
+                      <i class="nav-icon fas fa-tachometer-alt"></i>
+                      <p>Dashboard</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/pj/proyek" class="nav-link <?= $title == 'Proyek' ? 'active' : ''; ?>">
+                      <i class="nav-icon fas fa-th"></i>
+                      <p>Kelola Data Proyek</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/pj/register" class="nav-link <?= $title == 'Register' ? 'active' : ''; ?>">
+                    <i class="nav-icon fas fa-chart-pie"></i>
+                      <p>Register Proyek</p>
+                    </a>
+                  </li>
+                  <?php break;
+                
+                default:
+                  # code...
+                  break;
+              }
+            ?>
             <li class="nav-item">
-              <a href="<?= base_url(); ?>/admin" class="nav-link <?= $title == 'Dashboard' ? 'active' : ''; ?>">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?= base_url(); ?>/admin/proyek" class="nav-link <?= $title == 'Proyek' ? 'active' : ''; ?>">
-                <i class="nav-icon fas fa-th"></i>
-                <p>Kelola Data Proyek</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?= base_url(); ?>/admin/pegawai" class="nav-link <?= $title == 'Pegawai' ? 'active' : ''; ?>">
-              <i class="nav-icon fas fa-copy"></i>
-                <p>Kelola Akun Pegawai</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?= base_url(); ?>/admin/register" class="nav-link <?= $title == 'Register' ? 'active' : ''; ?>">
-              <i class="nav-icon fas fa-chart-pie"></i>
-                <p>Register Proyek</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?= base_url(); ?>/admin/register" class="nav-link btn btn-danger" style="text-align: inherit;" data-toggle="modal" data-target="#logout">
+              <a class="nav-link btn btn-danger" style="text-align: inherit;" data-toggle="modal" data-target="#logout">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
                 <p>Logout</p>
               </a>
