@@ -120,6 +120,27 @@
                     </a>
                   </li>
                   <?php break;
+
+                case 'member': ?>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/member" class="nav-link <?= $title == 'Dashboard' ? 'active' : ''; ?>">
+                      <i class="nav-icon fas fa-tachometer-alt"></i>
+                      <p>Dashboard</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/member/proyek" class="nav-link <?= $title == 'Proyek' ? 'active' : ''; ?>">
+                      <i class="nav-icon fas fa-th"></i>
+                      <p>Kelola Data Proyek</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/member/register" class="nav-link <?= $title == 'Register' ? 'active' : ''; ?>">
+                    <i class="nav-icon fas fa-chart-pie"></i>
+                      <p>Register Proyek</p>
+                    </a>
+                  </li>
+                  <?php break;
                 
                 default:
                   # code...

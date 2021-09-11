@@ -70,6 +70,46 @@ $routes->group('admin', function ($routes) {
 
 $routes->group('pj', function ($routes) {
   $routes->get('/', 'PenanggungJawabcontroller::index');
+
+  $routes->group('proyek', function ($routes) {
+    $routes->get('/', 'Proyekcontroller::index');
+    $routes->get('tambah', 'Proyekcontroller::create');
+    $routes->post('tambah', 'Proyekcontroller::store');
+    $routes->get('edit/(:any)', 'Proyekcontroller::edit/$1');
+    $routes->put('edit/(:any)', 'Proyekcontroller::update/$1');
+    $routes->delete('hapus/(:any)', 'Proyekcontroller::destroy/$1');
+  });
+
+  $routes->group('register', function ($routes) {
+    $routes->get('/', 'Registercontroller::index');
+    $routes->get('tambah', 'Registercontroller::create');
+    $routes->post('tambah', 'Registercontroller::store');
+    $routes->get('edit/(:any)', 'Registercontroller::edit/$1');
+    $routes->put('edit/(:any)', 'Registercontroller::update/$1');
+    $routes->delete('hapus/(:any)', 'Registercontroller::destroy/$1');
+  });
+});
+
+$routes->group('member', function ($routes) {
+  $routes->get('/', 'Membercontroller::index');
+
+  $routes->group('proyek', function ($routes) {
+    $routes->get('/', 'Proyekcontroller::index');
+    $routes->get('tambah', 'Proyekcontroller::create');
+    $routes->post('tambah', 'Proyekcontroller::store');
+    $routes->get('edit/(:any)', 'Proyekcontroller::edit/$1');
+    $routes->put('edit/(:any)', 'Proyekcontroller::update/$1');
+    $routes->delete('hapus/(:any)', 'Proyekcontroller::destroy/$1');
+  });
+
+  $routes->group('register', function ($routes) {
+    $routes->get('/', 'Registercontroller::index');
+    $routes->get('tambah', 'Registercontroller::create');
+    $routes->post('tambah', 'Registercontroller::store');
+    $routes->get('edit/(:any)', 'Registercontroller::edit/$1');
+    $routes->put('edit/(:any)', 'Registercontroller::update/$1');
+    $routes->delete('hapus/(:any)', 'Registercontroller::destroy/$1');
+  });
 });
 
 /*
