@@ -22,6 +22,13 @@
       <a href="../../index2.html" class="h1"><b>SI Pengelolaan Data Proyek</b></a>
     </div>
     <div class="card-body">
+      <?php 
+        if (session('error')) { ?>
+          <div class="alert alert-danger">
+            <?= session('error'); ?>
+          </div>
+        <?php }
+      ?>
       <form action="/login" method="post">
         <?= csrf_field() ?>
         <div class="input-group mb-3">

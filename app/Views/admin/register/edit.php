@@ -44,7 +44,7 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Dokumen Title</label>
+                    <label for="exampleInputEmail1">Dokumen Title <?= $id_register; ?></label>
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Dokumen Title" name="dokumen_title" required value="<?= $dokumen_title; ?>">
                   </div>
                   <div class="form-group">

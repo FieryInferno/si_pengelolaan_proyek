@@ -35,8 +35,11 @@ class Registercontroller extends BaseController
     $file     = $this->request->getFile('dokumen');
     $filename = $file->getName();
     $file->move('upload', $filename);
+    $id_register  = uniqid('register');
+    // print_r($id_register);
+    // die();
     $this->register->insert([
-      'id_dokumen'        => uniqid('dokumen'),
+      'id_register'       => $id_register,
       'proyek_id'         => $this->request->getPost('proyek_id'),
       'dokumen_title'     => $this->request->getPost('dokumen_title'),
       'dokumen_kategori'  => $this->request->getPost('dokumen_kategori'),

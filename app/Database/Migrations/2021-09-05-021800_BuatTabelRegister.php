@@ -50,7 +50,7 @@ class BuatTabelRegister extends Migration
         'default' => NULL
       ],
     ]);
-    $this->forge->addKey('id_dokumen', true);
+    $this->forge->addKey('id_register', true);
     $this->forge->addForeignKey('proyek_id', 'proyek', 'id_proyek', 'CASCADE', 'CASCADE');
     $this->forge->createTable('register');
 	}

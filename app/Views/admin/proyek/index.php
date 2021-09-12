@@ -63,10 +63,10 @@
                           <td>
                             <a href="<?= base_url(); ?>/admin/proyek/edit/<?= $key->id_proyek; ?>" class="btn btn-success">Edit</a>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus">Hapus</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapus<?= $key->id_proyek; ?>">Hapus</button>
 
                             <!-- Modal -->
-                            <div class="modal fade" id="hapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="hapus<?= $key->id_proyek; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">
