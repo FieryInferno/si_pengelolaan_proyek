@@ -141,6 +141,21 @@
                     </a>
                   </li>
                   <?php break;
+
+                case 'pegawai': ?>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/pegawai" class="nav-link <?= $title == 'Dashboard' ? 'active' : ''; ?>">
+                      <i class="nav-icon fas fa-tachometer-alt"></i>
+                      <p>Dashboard</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url(); ?>/pegawai/proyek" class="nav-link <?= $title == 'Proyek' ? 'active' : ''; ?>">
+                      <i class="nav-icon fas fa-th"></i>
+                      <p>Lihat Proyek</p>
+                    </a>
+                  </li>
+                  <?php break;
                 
                 default:
                   # code...

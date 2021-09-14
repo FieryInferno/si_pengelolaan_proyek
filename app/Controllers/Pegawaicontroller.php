@@ -219,4 +219,11 @@ class Pegawaicontroller extends BaseController
     $this->user->delete($id_user);
     return redirect()->to('/admin/pegawai')->with('sukses', 'Berhasil hapus pegawai');
   }
+
+  public function pegawai()
+  {
+    $data['konten'] = 'pegawai/dashboard';
+    $data['title']  = 'Dashboard';
+		return view('template', $data);
+  }
 }

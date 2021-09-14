@@ -112,6 +112,10 @@ $routes->group('member', function ($routes) {
   });
 });
 
+$routes->group('pegawai', function ($routes) {
+  $routes->get('/', 'Pegawaicontroller::pegawai');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
