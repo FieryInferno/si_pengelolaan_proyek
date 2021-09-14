@@ -114,6 +114,10 @@ $routes->group('member', function ($routes) {
 
 $routes->group('pegawai', function ($routes) {
   $routes->get('/', 'Pegawaicontroller::pegawai');
+
+  $routes->group('proyek', function ($routes) {
+    $routes->get('/', 'Proyekcontroller::proyekPegawai');
+  });
 });
 
 /*

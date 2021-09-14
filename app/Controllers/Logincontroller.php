@@ -5,10 +5,12 @@ namespace App\Controllers;
 class Logincontroller extends BaseController
 {
   private $user;
+  private $pegawai;
 
   public function __construct()
   {
-    $this->user = new \App\Models\UserModel;
+    $this->user     = new \App\Models\UserModel;
+    $this->pegawai  = new \App\Models\PegawaiModel;
   }
   
 	public function index()
@@ -47,6 +49,10 @@ class Logincontroller extends BaseController
               return redirect()->to('/pj');
               break;
             case 'pegawai':
+              $pegawai  = $this->pegawai->where('user_id', $user['id_user'])->first();
+              $session->set([
+                'id_pegawai'  => $pegawai['id_pegawai']
+              ]);
               return redirect()->to('/pegawai');
               break;
             

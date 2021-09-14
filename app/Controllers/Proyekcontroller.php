@@ -21,12 +21,12 @@ class Proyekcontroller extends BaseController
     $data['konten'] = 'admin/proyek/index';
     $data['title']  = 'Proyek';
     $data['proyek'] = $this->proyek
-                      ->select('proyek.id_proyek, user_pegawai.nama_lengkap as nama_pegawai, user_admin.nama_lengkap as nama_admin, proyek.nama_proyek, proyek.lokasi_proyek')
-                      ->join('admin', 'proyek.admin_id = admin.id_admin')
-                      ->join('pegawai', 'proyek.pegawai_id = pegawai.id_pegawai')
-                      ->join('user as user_admin', 'admin.user_id = user_admin.id_user')
-                      ->join('user as user_pegawai', 'pegawai.user_id = user_pegawai.id_user')
-                      ->get()->getResult();
+    ->select('proyek.id_proyek, user_pegawai.nama_lengkap as nama_pegawai, user_admin.nama_lengkap as nama_admin, proyek.nama_proyek, proyek.lokasi_proyek')
+    ->join('admin', 'proyek.admin_id = admin.id_admin')
+    ->join('pegawai', 'proyek.pegawai_id = pegawai.id_pegawai')
+    ->join('user as user_admin', 'admin.user_id = user_admin.id_user')
+    ->join('user as user_pegawai', 'pegawai.user_id = user_pegawai.id_user')
+    ->get()->getResult();
 		return view('template', $data);
 	}
 
@@ -78,5 +78,27 @@ class Proyekcontroller extends BaseController
   {
     $this->proyek->delete($id_proyek);
     return redirect()->to('/admin/proyek')->with('sukses', 'Berhasil hapus proyek');
+  }
+
+  public function proyekPegawai()
+  {
+    $data['konten']         = 'pegawai/proyek';
+    $data['title']          = 'Proyek';
+    $data['proyekPegawai']  = $this->proyek
+    ->select('proyek.id_proyek, user_pegawai.nama_lengkap as nama_pegawai, user_admin.nama_lengkap as nama_admin, proyek.nama_proyek, proyek.lokasi_proyek')
+    ->join('admin', 'proyek.admin_id = admin.id_admin')
+    ->join('pegawai', 'proyek.pegawai_id = pegawai.id_pegawai')
+    ->join('user as user_admin', 'admin.user_id = user_admin.id_user')
+    ->join('user as user_pegawai', 'pegawai.user_id = user_pegawai.id_user')
+    ->where('pegawai_id', session('id_pegawai'))
+    ->get()->getResult();
+    $data['proyek'] = $this->proyek
+    ->select('proyek.id_proyek, user_pegawai.nama_lengkap as nama_pegawai, user_admin.nama_lengkap as nama_admin, proyek.nama_proyek, proyek.lokasi_proyek')
+    ->join('admin', 'proyek.admin_id = admin.id_admin')
+    ->join('pegawai', 'proyek.pegawai_id = pegawai.id_pegawai')
+    ->join('user as user_admin', 'admin.user_id = user_admin.id_user')
+    ->join('user as user_pegawai', 'pegawai.user_id = user_pegawai.id_user')
+    ->get()->getResult();
+		return view('template', $data);
   }
 }
