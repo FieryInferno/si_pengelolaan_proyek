@@ -19,9 +19,10 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>SI Pengelolaan Data Proyek</b></a>
+      <a href="<?= base_url(); ?>" class="h1"><b>SI Pengelolaan Data Proyek</b></a>
     </div>
     <div class="card-body">
+      <img src="<?= base_url(); ?>/images/logo_wika.jpeg" alt="" width="100%">
       <?php 
         if (session('error')) { ?>
           <div class="alert alert-danger">
