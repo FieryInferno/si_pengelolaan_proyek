@@ -51,7 +51,7 @@
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Dokumen Kategori" name="dokumen_kategori" required>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Dokumen</label>
+                    <label for="exampleInputEmail1">Dokumen (format: .xls, .pdf, .docx dan .doc)</label>
                     <div class="custom-file">
                       <input type="file" class="custom-file-input" id="dokumen" name="dokumen" required>
                       <label class="custom-file-label" for="customFile">Choose file</label>
