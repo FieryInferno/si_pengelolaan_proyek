@@ -52,7 +52,7 @@
                     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Dokumen Kategori" name="dokumen_kategori" required value="<?= $dokumen_kategori; ?>">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Dokumen</label>
+                    <label for="exampleInputEmail1">Dokumen (format: .xls, .pdf, .docx dan .doc)</label>
                     <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Masukan Email" name="dokumen">
                     <input type="hidden" name="dokumen_lama" value="<?= $dokumen_url; ?>">
                   </div>
