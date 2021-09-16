@@ -10,4 +10,11 @@ class Home extends BaseController
     $data['title']  = 'Home';
 		return view('template_awal', $data);
 	}
+
+  public function tentang()
+  {
+    $data['konten'] = 'tentang';
+    $data['title']  = 'Tentang';
+		return view('template_awal', $data);
+  }
 }

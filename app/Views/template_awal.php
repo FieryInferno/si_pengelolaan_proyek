@@ -47,7 +47,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">				
           <li <?= $title == 'Home' ? 'class="active"' : ''; ?>><a href="<?= base_url(); ?>">Rumah <span class="sr-only">(current)</span></a></li>
-          <li <?= $title == 'About' ? 'class="active"' : ''; ?>><a href="<?= base_url(); ?>/tentang">Tentang</a></li>
+          <li <?= $title == 'Tentang' ? 'class="active"' : ''; ?>><a href="<?= base_url(); ?>/tentang">Tentang</a></li>
           <li><a href="https://koperasi.inti.co.id/artikel">Info Proyek</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
