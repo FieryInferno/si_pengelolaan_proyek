@@ -40,5 +40,19 @@
       </div>
     </div>
   </div>
+  <div class="container-fluid" style="background-image: linear-gradient(to right, rgb(20 16 16), rgb(245 246 252 / 0%)), url('/images/skyfive.jpg');background-size:cover;height: 41rem;">
+    <div class="position-relative top-50 start-0 translate-middle-y">
+      <div class="card" style="width: 25rem;background: transparent;">
+        <div class="card-body">
+          <h3 class="card-title text-center text-white">Taman Sari Sky Hive</h3>
+          <h6 class="card-title text-center text-white">Jakarta, Indonesia</h6>
+          <p class="text-justify text-white">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus eros nec ipsum egestas, id mattis mauris facilisis. Morbi et laoreet metus, in finibus risus. Nunc non venenatis tortor. In ex libero, dignissim luctus lorem ac, vestibulum finibus est. Proin malesuada ultrices felis, in bibendum tortor venenatis eu. Fusce vel est ac urna varius ultricies vitae a quam. Suspendisse potenti. Proin risus magna, bibendum sit amet justo eget, posuere porttitor sem. Ut sed congue neque. Aliquam erat volutpat. Pellentesque
+          </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
