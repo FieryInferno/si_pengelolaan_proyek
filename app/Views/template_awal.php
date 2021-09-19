@@ -54,5 +54,41 @@
       </div>
     </div>
   </div>
+  <div class="container-fluid" style="background-color: black;height: 41rem;">
+    <h1 class="text-center text-white">WIKA Great Leader Class</h1>
+    <h4 class="text-center">Learn, Follow and Become Great Leader</h4>
+    <table width="100%" class="mt-5">
+      <tr>
+        <td width="20%">
+          <img src="/images/foto3.png" alt="" width="100%">
+          <h6 class="text-center text-white mt-2">Hananto Aji</h6>
+          <p class="text-center">Director of Operations</p>
+        </td>
+        <td width="20%">
+          <img src="/images/foto5.png" alt="" width="100%">
+          <h6 class="text-center text-white mt-2">Achmadi Tri Cahyono</h6>
+          <p class="text-center">Senior Vice President of Engineering</p>
+        </td>
+        <td width="20%">
+          <img src="/images/foto4.png" alt="" width="100%">
+          <h6 class="text-center text-white mt-2">Agung Budi Waskito, S.T, M.Tech</h6>
+          <p class="text-center">President Director</p>
+        </td>
+        <td width="20%">
+          <img src="/images/foto2.png" alt="" width="100%">
+          <h6 class="text-center text-white mt-2">Mursyid</h6>
+          <p class="text-center">Director of Human Control and Development</p>
+        </td>
+        <td width="20%">
+          <img src="/images/foto1.png" alt="" width="100%">
+          <h6 class="text-center text-white mt-2">Ade Wahyu</h6>
+          <p class="text-center">Director of Finance</p>
+        </td>
+      </tr>
+    </table>
+    <div class="text-center">
+      <button class="btn text-white" style="background-color: #fb07ff; border-color: #fb07ff;">Lihat Selengkapnya ></button>
+    </div>
+  </div>
 </body>
 </html>
